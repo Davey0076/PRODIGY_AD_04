@@ -1,0 +1,31 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color (black) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#000000"/> <!-- Black background -->
+        </shape>
+    </item>
+
+    <!-- Glowing border -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="4dp"
+                android:color="#FFFFFF"/> <!-- White border -->
+            <corners android:radius="8dp"/> <!-- Rounded corners for the border -->
+        </shape>
+    </item>
+
+    <!-- Inner glow effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000"/> <!-- Transparent -->
+            <stroke
+                android:width="4dp"
+                android:color="#80FFFFFF"/> <!-- Semi-transparent white for glow -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+</layer-list>

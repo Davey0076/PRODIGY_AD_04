@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <!-- Layout for Header Section -->
+    <RelativeLayout
+        android:id="@+id/headerTicTac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/finger_paint"
+            android:text="TIC-TAC-TOE"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <!-- GridLayout for Tic Tac Toe Buttons -->
+    <GridLayout
+        android:id="@+id/layoutTAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:background="@drawable/grid_background"
+        android:rowCount="3"
+        app:layout_constraintTop_toBottomOf="@id/headerTicTac"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+
+        <!-- Button 1 -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="0"
+            android:layout_margin="5dp"
+            android:textSize="32sp" />
+
+        <!-- Button 2 -->
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="1"
+            android:textSize="32sp" />
+
+        <!-- Button 3 -->
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="2"
+            android:textSize="32sp" />
+
+        <!-- Button 4 -->
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="3"
+            android:textSize="32sp" />
+
+        <!-- Button 5 -->
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="4"
+            android:layout_margin="5dp"
+            android:textSize="32sp" />
+
+        <!-- Button 6 -->
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="5"
+            android:layout_margin="5dp"
+            android:textSize="32sp" />
+
+        <!-- Button 7 -->
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="6"
+            android:layout_margin="5dp"
+            android:textSize="32sp" />
+
+        <!-- Button 8 -->
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="7"
+            android:textSize="32sp" />
+
+        <!-- Button 9 -->
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/finger_paint"
+            android:onClick="playerTap"
+            android:tag="8"
+            android:textSize="32sp" />
+    </GridLayout>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Game"
+        android:textSize="18sp"
+        android:fontFamily="@font/finger_paint"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:onClick="resetGame"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTAC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
